@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar</title>
+    <link rel="stylesheet" href="st.css">
+</head>
+<body>
+    <button onclick="voltar()" class="back">Voltar</button>
+
+    <main>
+
+    <form action="buscar.php" method="POST">
+    <h1>Consultar</h1>
+    <input type="text" placeholder="CPF do Aluno" name="cpf"> 
+    <br> <br>
+    <input type="submit" class="consultarbtt" value="Consultar">
+</form>
+
+
+
+<script>
+
+function voltar() {
+    location.href = '/gym/index.html';
+
+        }
+</script>
+
+<!--     <button onclick="voltar()" class="back">Voltar</button> -->
+
+    
+</body>
+</html>

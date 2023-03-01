@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #4C5958; ;
+    color: white;
+    
+    /* margin: 0px;
+     */
+}
+
+
+main{
+    text-align: center;
+    border: 1px solid white;
+    width: 50%;
+    padding: 20px 20px;
+    margin: auto;
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    border: 1px solid white;
+    width:50%;
+    box-shadow: 3px 5px 5px black;
+}
+
+button{
+    background-color: #10403B;
+    border: 0;
+    border-radius: 20px;
+    padding: 10px 25px;
+    margin-right: 10px;
+    color: white;
+    font-size: 20pt;
+
+
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #10403B;
+    border: 0;
+    
+    box-shadow: 1px 5px 10px white;
+}
+
+
+
+.ahora{
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    border: 1px solid white;
+    width:50%;
+    box-shadow: 3px 5px 5px black;
+    
+}
+
+@media (max-width: 720px) {
+
+    button{
+        background-color: #10403B;
+        border: 0;
+        border-radius: 18px;
+        padding: 10px 15px;
+        margin-right: 10px;
+        color: white;
+        font-size: 15pt;
+    
+    
+    }
+
+    main{
+        text-align: center;
+        border: 1px solid white;
+        width:50%;
+    }
+    h1,main{
+        font-size: 16pt;
+    }
+
+
+}
+
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-1-hex { color: #127369; }
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-2-hex { color: #10403B; }
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-3-hex { color: #8AA6A3; }
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-4-hex { color: #4C5958; }
+.N-I-S-H-I-K-I-G-O---Furniture-Design-Award-2014-5-hex { color: #BFBFBF; }
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Screen</title>
+    <link rel="stylesheet" href="st.css">
+</head>
+<body>
+
+    <main>
+        <h1>Bem vindo à Gu-Fit</h1>
+        <h1>O que deseja fazer?</h1>
+
+
+        <button onclick="consultar()">
+            Consultar
+        </button>
+
+        <button onclick="cadastrar()">
+        Cadastrar
+    </button>
+    <button onclick="deletar()" id="delete">Deletar</button>
+
+
+
+
+    </main>
+
+
+   <br><br><br> <div class="ahora">
+
+        <p id="datahtml"></p>
+        <p id="hora"></p>
+
+    </div>
+
+    <script>
+    function cadastrar(){
+        
+        location.href = './cadastro/formulario.php'
+        
+    }
+    function consultar() {
+        location.href = './consulta/index.html'
+
+    }
+
+    function deletar() {
+        location.href = './deletar/index.html'
+    }
+
+let data = new Date();
+let dia = data.getDay();
+let mes = data.getMonth();
+let ano = data.getFullYear();
+let hora = data.getHours()
+let minutos = data.getMinutes()
+
+let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+
+let datahtml = document.getElementById('datahtml');
+let horahtml = document.getElementById('hora');
+horahtml.innerHTML = `${hora} horas e ${minutos} minutos`
+datahtml.innerHTML = `${dia} de ${meses[mes]} de ${ano}`;
+
+
+    </script>
+
+
+    
+</body>
+</html>
