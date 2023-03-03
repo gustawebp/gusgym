@@ -75,7 +75,7 @@ text-align: center;
 
 
 <script>function voltar() {
-    location.href = '/gym/index.html';
+    location.href = '/gym/deletar/index.html';
 
         }</script>
 </div>

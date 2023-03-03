@@ -99,6 +99,8 @@ if(isset($_POST['submit'])) {
     <title>Cadastro de Alunos</title>
     <link rel="stylesheet" href="stylecadastro.css">
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/0/396.png" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 <body>
     <button onclick="voltar()" class="back">Voltar</button>
@@ -112,14 +114,14 @@ if(isset($_POST['submit'])) {
 
     <p class="cad">Cadastro de Alunos</p>
     
-     <input required placeholder="Nome Completo" name="nome" type="text"> <br> <br>
-     <input required  placeholder="CPF" name="cpf" maxlength="11" type="text"> <br> <br>
-     <input required type="radio" value="masculino" name="sexo"> Masculino <br>
+     <input autocomplete="off" required placeholder="Nome Completo" name="nome" type="text"> <br> <br>
+     <input required id="cpf"  placeholder="CPF" name="cpf" maxlength="11" type="text"> <br> <br>
+     <input autocomplete="off" required type="radio" value="masculino" name="sexo"> Masculino <br>
      <input required type="radio" value="feminino" name="sexo"> Feminino <br> <br>
-    <span required id="data">Data de Nascimento</span> <input  placeholder="Idade"  maxlength="8" name="datanasc" type="date"> <br> <br>
-    <span required id="data">Data de Matricula</span> <input  placeholder="data_matricula" maxlength="8"  name="datanasc" type="date"> <br> <br>
-     <input required type="text" maxlength="13"  name="telefone" placeholder="Telefone"> <br>  <br>
-     <input required type="text" maxlength="50"  name="endereco" placeholder="Endereço">
+    <span   placeholder="a" id="data">Data de Nascimento</span> <input autocomplete="off" required placeholder="Idade" id="data"  maxlength="8" name="datanasc" type="date"> <br> <br>
+    <span required id="data">Data de Matricula</span> <input required   id="data"  placeholder="data_matricula" maxlength="8" max="8"  name="datanasc" type="date"> <br> <br>
+     <input autocomplete="off" required type="text" maxlength="13"  name="telefone" placeholder="Telefone"> <br>  <br>
+     <input autocomplete="off" required type="text" maxlength="50"  name="endereco" placeholder="Endereço">
      
 
 
@@ -163,6 +165,29 @@ if(isset($_POST['submit'])) {
         function voltar() {
             location.href = '/gym/index.html';
         }
+        $(document).ready(function(){
+        $('#cpf').mask('000.000.000-00');
+    });
+
+     
+const input = document.getElementById('cpf');
+
+// adicione um evento de escuta para quando o valor for alterado
+input.addEventListener('input', function() {
+  // obtenha o valor atual do input
+  const value = this.value;
+
+  // remova qualquer caractere que não seja um dígito
+  const cleanValue = value.replace(/\D/g, '');
+
+  // formate o valor como xxx.xxx.xxx-xx
+  const formattedValue = cleanValue.replace(/^(\d{3})(\d{3})(\d{3})(\d{2})$/, '$1.$2.$3-$4');
+
+  // defina o valor do input como a versão formatada
+  this.value = formattedValue;
+});
+
+
     </script>
    
 

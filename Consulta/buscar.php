@@ -87,7 +87,7 @@ text-align: center;
 
 
 <script>function voltar() {
-    location.href = '/gym/index.html';
+    location.href = '/gym/consulta/index.html';
 
         }</script>
 </div>
