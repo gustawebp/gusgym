@@ -96,7 +96,7 @@ if(isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Alunos</title>
+    <title>Gym System</title>
     <link rel="stylesheet" href="stylecadastro.css">
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/0/396.png" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

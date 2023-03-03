@@ -57,21 +57,37 @@ text-align: center;
     include_once('config.php');
 
     $cpf = $_POST['cpf'];
-    
 
-    $query = "DELETE FROM USUARIOS WHERE CPF = '$cpf'";
-    $result = mysqli_query($conexao, $query);
+    // Busca os dados do usuário antes de deletar
+    $query_select = "SELECT id, nome, data_nasc, cpf, sexo, telefone, endereco, altura, peso, nivel FROM usuarios WHERE cpf = '$cpf'";
+    $result_select = mysqli_query($conexao, $query_select);
+    $usuario_deletado = mysqli_fetch_assoc($result_select);
+
+    // Deleta o usuário
+    $query_delete = "DELETE FROM usuarios WHERE cpf = '$cpf'";
+    $result_delete = mysqli_query($conexao, $query_delete);
 
     if(mysqli_affected_rows($conexao) > 0) {
         // Registro deletado com sucesso
         echo "Registro deletado com sucesso. <br>
-        CPF: '$cpf'";
+        Dados do usuário: <br>";
+        echo "ID: " . $usuario_deletado['id'] . "<br>";
+        echo "Nome: " . $usuario_deletado['nome'] . "<br>";
+        echo "Data de nascimento: " . $usuario_deletado['data_nasc'] . "<br>";
+        echo "CPF: " . $usuario_deletado['cpf'] . "<br>";
+        echo "Sexo: " . $usuario_deletado['sexo'] . "<br>";
+        echo "Telefone: " . $usuario_deletado['telefone'] . "<br>";
+        echo "Endereço: " . $usuario_deletado['endereco'] . "<br>";
+        echo "Altura: " . $usuario_deletado['altura'] . "<br>";
+        echo "Peso: " . $usuario_deletado['peso'] . "<br>";
+        echo "Nível: " . $usuario_deletado['nivel'] . "<br>";
     } else {
         // Registro não encontrado ou não foi deletado
         echo "Não foi possível deletar o registro. <br> Verifique o CPF";
     }
-?>
 
+    mysqli_close($conexao);
+?>
 
 
 <script>function voltar() {

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dados Encontrados</title>
+    <title>Gym System</title>
 
 </head>
 
@@ -48,7 +48,7 @@ text-align: center;
 </style>
 <body>
 
-<h1>Aluno Encontrado!</h1>
+
 <button onclick="voltar()" class="back">Voltar</button>
 
 <div class="encontrado">
